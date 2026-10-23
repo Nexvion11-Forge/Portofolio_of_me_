@@ -1656,6 +1656,91 @@ background: linear-gradient(
     .footer-links {
         gap: 18px;
     }
+    /* ===== MOBILE RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  html {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: clamp(28px, 8vw, 42px);
+    overflow-wrap: break-word;
+  }
+
+  h2 {
+    font-size: clamp(24px, 6vw, 32px);
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+  }
+
+  button,
+  a {
+    max-width: 100%;
+  }
+
+  .container,
+  .home,
+  .hero,
+  .about,
+  .skills,
+  .projects,
+  .contact {
+    max-width: 100%;
+  }
+
+  .skills-container,
+  .projects-container,
+  .contact-container {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    gap: 16px;
+  }
+
+  .skill-box,
+  .project-box,
+  .contact-box {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+}
 
     .footer-name {
         font-size: 27px;
