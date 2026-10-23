@@ -1646,28 +1646,17 @@ background: linear-gradient(
     font-size: 13px;
     margin-top: 25px;
 }
-
-/* MOBILE */
-@media (max-width: 600px) {
-    .footer {
-        padding: 35px 5% 25px;
-    }
-
-    .footer-links {
-        gap: 18px;
-    }
-    /* ===== MOBILE RESPONSIVE ===== */
+/* MOBILE RESPONSIVE DESIGN */
 @media screen and (max-width: 768px) {
-  html {
-    width: 100%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
 
+  html,
   body {
     width: 100%;
+    max-width: 100%;
     margin: 0;
+    padding: 0;
     overflow-x: hidden;
+    font-size: 16px;
   }
 
   * {
@@ -1679,29 +1668,58 @@ background: linear-gradient(
     height: auto;
   }
 
+  /* Main headings */
   h1 {
-    font-size: clamp(28px, 8vw, 42px);
-    overflow-wrap: break-word;
+    font-size: clamp(2rem, 9vw, 3.5rem);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
   }
 
   h2 {
-    font-size: clamp(24px, 6vw, 32px);
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
+    line-height: 1.2;
   }
 
   p {
-    font-size: 15px;
+    font-size: 1rem;
     line-height: 1.7;
     overflow-wrap: anywhere;
   }
 
-  button,
-  a {
+  /* Navigation buttons */
+  nav,
+  .navbar,
+  .nav-links {
     max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
   }
 
+  nav a,
+  .navbar a,
+  .nav-links a {
+    max-width: 100%;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  /* Profile image */
+  .profile-img,
+  .profile-image,
+  .profile-pic,
+  .profile-photo {
+    width: min(65vw, 280px);
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Main sections */
+  section,
   .container,
-  .home,
   .hero,
+  .home,
   .about,
   .skills,
   .projects,
@@ -1709,40 +1727,46 @@ background: linear-gradient(
     max-width: 100%;
   }
 
-  .skills-container,
-  .projects-container,
-  .contact-container {
-    grid-template-columns: minmax(0, 1fr);
-    width: 100%;
-    gap: 16px;
-  }
-
-  .skill-box,
-  .project-box,
-  .contact-box {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-@media screen and (max-width: 480px) {
   section {
     padding-left: 16px;
     padding-right: 16px;
   }
 
-  nav {
-    flex-wrap: wrap;
-    gap: 8px;
+  /* Project and skill cards */
+  .skills-container,
+  .projects-container,
+  .contact-container,
+  .skill-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    width: 100%;
   }
 
-  nav a {
-    font-size: 13px;
-    padding: 8px 10px;
+  .skill-box,
+  .project-card,
+  .contact-box {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
-}
 
-    .footer-name {
-        font-size: 27px;
-    }
+  /* Buttons */
+  button,
+  .btn,
+  .project-btn {
+    max-width: 100%;
+    white-space: normal;
+    font-size: 1rem;
+  }
+
+  /* Prevent oversized text */
+  .quote,
+  .welcome,
+  .welcome-text {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-size: clamp(1.3rem, 6vw, 2.3rem);
+    line-height: 1.3;
+  }
+
 }
